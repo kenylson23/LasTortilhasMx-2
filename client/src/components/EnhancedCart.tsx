@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MenuItem } from '@shared/schema';
+import { MenuItem } from '../../../shared/schema';
 
 interface CartItem extends MenuItem {
   quantity: number;
@@ -83,6 +83,11 @@ export default function EnhancedCart({
 
   const getTotalPrice = () => {
     return getSubtotal() + deliveryFee;
+  };
+
+  const getPreparationTime = () => {
+    const maxTime = Math.max(...cart.map(item => item.preparationTime || 15));
+    return maxTime + (customerInfo.orderType === 'delivery' ? 30 : 0);
   };
 
   // Tempo de preparo será definido pela cozinha após receber o pedido
