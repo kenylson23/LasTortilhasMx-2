@@ -218,7 +218,7 @@ export default function EnhancedCart({
                         className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 border rounded-lg hover:bg-gray-50 transition-colors"
                       >
                         <img
-                          src={item.image || '/api/placeholder/80/80'}
+                          src="/api/placeholder/80/80"
                           alt={item.name}
                           className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0"
                         />
