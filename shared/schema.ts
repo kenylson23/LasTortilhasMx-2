@@ -114,7 +114,6 @@ export const insertMenuItemSchema = createInsertSchema(menuItems).omit({
 export const insertOrderSchema = createInsertSchema(orders).omit({
   id: true,
   createdAt: true,
-  updatedAt: true,
 }).extend({
   estimatedDeliveryTime: z.string().optional(),
 });

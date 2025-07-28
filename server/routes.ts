@@ -679,7 +679,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { id } = req.params;
       
-      const { data, error } = await adminAuth.deleteUser(id);
+      const { error } = await adminAuth.deleteUser(id);
       
       if (error) {
         return res.status(500).json({ error: error.message });
