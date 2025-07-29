@@ -1,0 +1,183 @@
+/* Performance optimizations CSS */
+
+/* Otimização para imagens */
+.lazy-image {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}
+
+.lazy-image img {
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+}
+
+/* Otimização para animações */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Otimização para elementos que fazem scroll */
+.scroll-container {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Otimização para elementos off-screen */
+.off-screen {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 200px;
+}
+
+/* Reduzir layout shifts */
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.67%; /* 3:2 aspect ratio */
+  overflow: hidden;
+}
+
+.aspect-ratio-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Otimização para parallax backgrounds */
+.parallax-bg {
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  /* Melhor compressão para backgrounds */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+}
+
+/* Otimização específica para hero image */
+.hero-background {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: opacity;
+  transition: opacity 0.7s ease-in-out;
+}
+
+/* Placeholder gradient para loading */
+.hero-placeholder {
+  background: linear-gradient(135deg, #991b1b 0%, #9a3412 35%, #a16207 100%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Otimização para backdrop-blur */
+.backdrop-blur-optimized {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  /* Fallback para navegadores antigos */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Otimização para hover effects */
+.hover-optimized {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+.hover-optimized:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Otimização para menu items */
+.menu-item-optimized {
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 300px;
+}
+
+/* Otimização para texto com sombras */
+.text-shadow-optimized {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  /* Usar apenas uma sombra para performance */
+}
+
+/* Otimização para elementos fixos */
+.fixed-optimized {
+  position: fixed;
+  contain: layout style paint;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Otimização para grid layouts */
+.grid-optimized {
+  display: grid;
+  contain: layout style;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Otimização para elementos que fazem stagger */
+.stagger-item {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Preload crítico */
+.preload-hint {
+  font-display: swap;
+}
+
+/* Otimização para scroll suave */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ef4444 #f5f5f5;
+}
+
+/* Otimização para elementos que aparecem com scroll */
+.reveal-element {
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 100px;
+}
+
+/* Reduzir repaint */
+.reduce-repaint {
+  contain: layout style paint;
+  isolation: isolate;
+}
+
+/* Otimização para buttons */
+.button-optimized {
+  contain: layout style paint;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-optimized:hover {
+  transform: translateY(-1px);
+}
+
+/* Otimização para cards */
+.card-optimized {
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 300px;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}

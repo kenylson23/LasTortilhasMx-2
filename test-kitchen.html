@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Painel Cozinha</title>
+</head>
+<body>
+    <h1>Teste de Acesso ao Painel da Cozinha</h1>
+    
+    <script>
+        // Testar navegação
+        console.log('Testando acesso...');
+        
+        // Testar se a rota está funcionando
+        fetch('/cozinha')
+            .then(response => {
+                console.log('Status:', response.status);
+                return response.text();
+            })
+            .then(html => {
+                console.log('Resposta recebida');
+                console.log('Contém React?', html.includes('script'));
+                
+                // Se tudo estiver ok, redirecionar
+                if (html.includes('script')) {
+                    console.log('✓ Rota funciona - redirecionando');
+                    window.location.href = '/cozinha';
+                } else {
+                    console.log('✗ Problema na rota');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+    </script>
+    
+    <div style="margin-top: 20px;">
+        <p>Verificando acesso...</p>
+        <a href="/cozinha" style="color: blue; text-decoration: underline;">
+            👨‍🍳 Ir diretamente para Painel da Cozinha
+        </a>
+        <br><br>
+        <a href="/admin" style="color: green; text-decoration: underline;">
+            📊 Ir para Painel Admin
+        </a>
+        <br><br>
+        <a href="/" style="color: gray; text-decoration: underline;">
+            🏠 Voltar ao Início
+        </a>
+    </div>
+</body>
+</html>
