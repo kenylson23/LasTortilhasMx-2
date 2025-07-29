@@ -2,13 +2,12 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import "./styles/performance.css";
-import heroImage from "@assets/From tortillas with Love   photo credit @andersson_samd_1751272348650.jpg";
 
 // Preload crítico da imagem do hero
 const preloadHeroImage = () => {
   const link = document.createElement('link');
   link.rel = 'preload';
-  link.href = heroImage;
+  link.href = '/images/hero-desktop.webp';
   link.as = 'image';
   link.fetchPriority = 'high';
   document.head.appendChild(link);
