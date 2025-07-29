@@ -1,0 +1,98 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Tacos",
+      "description": "Tortilhas artesanais com recheios tradicionais mexicanos",
+      "items": [
+        {
+          "id": 1,
+          "name": "Tacos al Pastor",
+          "description": "Carne de porco marinada com especiarias, abacaxi e cebola",
+          "price": 2500,
+          "currency": "AOA",
+          "image": "/uploads/tacos-al-pastor.jpg",
+          "category": "Tacos",
+          "available": true,
+          "spicy": 2
+        },
+        {
+          "id": 2,
+          "name": "Tacos de Carnitas",
+          "description": "Carne de porco desfiada cozida lentamente",
+          "price": 2300,
+          "currency": "AOA",
+          "image": "/uploads/tacos-carnitas.jpg",
+          "category": "Tacos",
+          "available": true,
+          "spicy": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Quesadillas",
+      "description": "Tortilhas grelhadas com queijo e recheios variados",
+      "items": [
+        {
+          "id": 3,
+          "name": "Quesadilla de Pollo",
+          "description": "Frango grelhado com queijo monterey jack e pimentões",
+          "price": 3200,
+          "currency": "AOA",
+          "image": "/uploads/quesadilla-pollo.jpg",
+          "category": "Quesadillas",
+          "available": true,
+          "spicy": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Burritos",
+      "description": "Tortilhas grandes recheadas com feijão, arroz e proteína",
+      "items": [
+        {
+          "id": 4,
+          "name": "Burrito Supreme",
+          "description": "Carne, feijão, arroz, queijo, alface, tomate e creme azedo",
+          "price": 4500,
+          "currency": "AOA",
+          "image": "/uploads/burrito-supreme.jpg",
+          "category": "Burritos",
+          "available": true,
+          "spicy": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Bebidas",
+      "description": "Bebidas tradicionais mexicanas e refrescos",
+      "items": [
+        {
+          "id": 5,
+          "name": "Agua Fresca de Tamarindo",
+          "description": "Bebida refrescante de tamarindo natural",
+          "price": 800,
+          "currency": "AOA",
+          "image": "/uploads/agua-fresca-tamarindo.jpg",
+          "category": "Bebidas",
+          "available": true,
+          "spicy": 0
+        },
+        {
+          "id": 6,
+          "name": "Horchata",
+          "description": "Bebida cremosa de arroz com canela",
+          "price": 900,
+          "currency": "AOA",
+          "image": "/uploads/horchata.jpg",
+          "category": "Bebidas",
+          "available": true,
+          "spicy": 0
+        }
+      ]
+    }
+  ]
+}

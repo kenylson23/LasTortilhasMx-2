@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Direto - Painel da Cozinha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f59e0b, #ef4444, #10b981);
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .btn-orange {
+            background: linear-gradient(135deg, #ea580c, #f59e0b);
+        }
+        .btn-blue {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+        }
+        .btn-green {
+            background: linear-gradient(135deg, #059669, #10b981);
+        }
+        h1 { font-size: 2rem; margin-bottom: 1rem; }
+        p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏪 Las Tortillas Mexican Grill</h1>
+        <p>Acesso Rápido aos Painéis do Sistema</p>
+        
+        <div>
+            <a href="/cozinha" class="btn btn-orange">
+                👨‍🍳 Painel da Cozinha
+            </a>
+            
+            <a href="/admin" class="btn btn-blue">
+                👨‍💼 Painel Administrativo
+            </a>
+            
+            <a href="/menu" class="btn btn-green">
+                🛒 Sistema de Pedidos
+            </a>
+        </div>
+        
+        <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
+            <p>Para acesso ao painel da cozinha, clique no botão laranja acima.<br>
+            Ou acesse diretamente: <strong>/cozinha</strong></p>
+        </div>
+    </div>
+</body>
+</html>
